@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerIdle
+  m_Name: IdlePlayer
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,23 +19,21 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0
+    - time: 0.033333335
       value: {fileID: 21300000, guid: 8631054f75cf9634db0303b90f9f9db8, type: 3}
-    - time: 0.35
+    - time: 0.36666667
       value: {fileID: 21300000, guid: bed6654153302de49a94e1042ce1ca96, type: 3}
-    - time: 0.71666664
+    - time: 0.7
       value: {fileID: 21300000, guid: 648e129ee0cb3e242ba63ce19b1aba28, type: 3}
     - time: 1.0666667
       value: {fileID: 21300000, guid: f2579cddebd060f4fb3debd230dde4b3, type: 3}
-    - time: 1.4166666
+    - time: 1.4333333
       value: {fileID: 21300000, guid: 511d4ca8e13747b4ab71dff6b3fe1c04, type: 3}
-    - time: 1.7666667
+    - time: 1.8
       value: {fileID: 21300000, guid: c8f64cfd6ddf1df4997d968a7da5dfd0, type: 3}
-    - time: 2.1166666
+    - time: 2.1333334
       value: {fileID: 21300000, guid: d7a096718db1e5c4e8c39e2f2bb17c72, type: 3}
-    - time: 2.4833333
-      value: {fileID: 21300000, guid: 9c1d80e95d022d542ac04984b8768a0e, type: 3}
-    - time: 2.8333333
+    - time: 2.5
       value: {fileID: 21300000, guid: 9c1d80e95d022d542ac04984b8768a0e, type: 3}
     attribute: m_Sprite
     path: 
@@ -64,7 +62,6 @@ AnimationClip:
     - {fileID: 21300000, guid: c8f64cfd6ddf1df4997d968a7da5dfd0, type: 3}
     - {fileID: 21300000, guid: d7a096718db1e5c4e8c39e2f2bb17c72, type: 3}
     - {fileID: 21300000, guid: 9c1d80e95d022d542ac04984b8768a0e, type: 3}
-    - {fileID: 21300000, guid: 9c1d80e95d022d542ac04984b8768a0e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -90,14 +87,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.2
+  - time: 2.85
     functionName: 
     data: 
     objectReferenceParameter: {fileID: 0}
