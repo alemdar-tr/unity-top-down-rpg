@@ -7,8 +7,19 @@ using UnityEditor.Callbacks;
 
 public class scr : MonoBehaviour
 {
+    public float GetY() {
+        float bro = transform.position.y;
+        return bro;
+    }
+
+    public float Getx() {
+        return transform.position.x;
+    }
     public GameObject MC;
     public float Speed;
+    private int Level = 1;
+    private int exp = 0;
+    bool facingright = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,15 +38,22 @@ public class scr : MonoBehaviour
         Vector2 mov = new Vector2(x, y) * Speed;
             
         transform.Translate(mov);
-        
+        if (x < 0 && facingright){
+            flip();
+        }
+        else if(x > 0 && !facingright) {
+            flip();
+        }
         
     }
 
-    public float getY() {
-        return transform.position.y;
+    void flip() {
+        Vector3 curruntscale = gameObject.transform.localScale;
+        curruntscale.x *= -1;
+        gameObject.transform.localScale = curruntscale;
+
+        facingright = !facingright;
     }
 
-    public float getx() {
-        return transform.position.x;
-    }
+
 }

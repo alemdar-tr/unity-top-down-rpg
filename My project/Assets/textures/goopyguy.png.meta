@@ -1,0 +1,367 @@
+fileFormatVersion: 2
+guid: 785a4e960d4f4254d9d5950159176194
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: goopyguy_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 25
+        width: 52
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: 26}
+        - {x: 2, y: 38}
+        - {x: -4, y: 46}
+        - {x: -15, y: 46}
+        - {x: -26, y: 26}
+        - {x: -26, y: -46}
+        - {x: 23, y: -46}
+        - {x: 26, y: -44}
+        - {x: 26, y: -4}
+        - {x: 21, y: 23}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99e054d36713b54fb0fe1e55f0fd5f3
+      internalID: -272485703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goopyguy_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 25
+        width: 52
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: 24}
+        - {x: -1, y: 37}
+        - {x: -7, y: 44}
+        - {x: -20, y: 44}
+        - {x: -26, y: 29}
+        - {x: -26, y: -46}
+        - {x: 26, y: -46}
+        - {x: 26, y: 6}
+        - {x: 23, y: 26}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e29d9dac2a91143a0a10b96151013f
+      internalID: 1661036801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goopyguy_2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 25
+        width: 52
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: 16}
+        - {x: -1, y: 27}
+        - {x: -7, y: 36}
+        - {x: -22, y: 36}
+        - {x: -26, y: 22}
+        - {x: -26, y: -46}
+        - {x: 26, y: -46}
+        - {x: 26, y: -5}
+        - {x: 24, y: 17}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47638b545f416fb48a7655fac5e40a14
+      internalID: 1270213037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goopyguy_3
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 25
+        width: 52
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7, y: 10}
+        - {x: -1, y: 20}
+        - {x: -6, y: 28}
+        - {x: -24, y: 28}
+        - {x: -26, y: 19}
+        - {x: -26, y: -46}
+        - {x: 26, y: -46}
+        - {x: 26, y: -8}
+        - {x: 24, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4f984a5b5efca4fb1e58c69588b553
+      internalID: 697799744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goopyguy_4
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 25
+        width: 52
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -5, y: 32}
+        - {x: -23, y: 32}
+        - {x: -26, y: 25}
+        - {x: -26, y: -46}
+        - {x: 26, y: -46}
+        - {x: 26, y: 3}
+        - {x: 25, y: 14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf8a53c502078845a8fe8d47ee7b82d
+      internalID: 624381685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goopyguy_5
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 25
+        width: 52
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -20, y: 40}
+        - {x: -26, y: 26}
+        - {x: -26, y: -46}
+        - {x: 25, y: -46}
+        - {x: 26, y: -45}
+        - {x: 26, y: 15}
+        - {x: 10, y: 40}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ce5557a966bb240b9d610aff5fef69
+      internalID: 2094322460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goopyguy_6
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 25
+        width: 52
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20, y: 28}
+        - {x: -5, y: 44}
+        - {x: -18, y: 44}
+        - {x: -26, y: 27}
+        - {x: -26, y: -46}
+        - {x: 23, y: -46}
+        - {x: 26, y: -44}
+        - {x: 26, y: -1}
+        - {x: 25, y: 9}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c13cc4910e0f34b9ba3164bd1599e9
+      internalID: -559919859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goopyguy_7
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 25
+        width: 52
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4, y: 46}
+        - {x: -15, y: 46}
+        - {x: -26, y: 26}
+        - {x: -26, y: -46}
+        - {x: 23, y: -46}
+        - {x: 26, y: -44}
+        - {x: 26, y: -4}
+        - {x: 21, y: 23}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee40f1657901ae47828f4423ac495e4
+      internalID: 495949143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      goopyguy_4: 624381685
+      goopyguy_6: -559919859
+      goopyguy_7: 495949143
+      goopyguy_0: -272485703
+      goopyguy_1: 1661036801
+      goopyguy_2: 1270213037
+      goopyguy_3: 697799744
+      goopyguy_5: 2094322460
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
