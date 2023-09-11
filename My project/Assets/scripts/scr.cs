@@ -9,23 +9,30 @@ public class scr : MonoBehaviour
 {
 
     public GameObject MC;
-    private Component rb;
+    public float Speed;
     // Start is called before the first frame update
     void Start()
     {
-        Update();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement();
+        float y = Input.GetAxis("Vertical");
+        float x = Input.GetAxis("Horizontal");
+        Vector2 mov = new Vector2(x, y) * Speed;
+            
+        transform.Translate(mov);
     }
 
     private void movement() {
-        bool W = Input.GetKeyDown(KeyCode.Space);
-        int y = Convert.ToInt32(W)
-        rb.GetComponent<Rigidbody2d> = new Vector2(0, y);
+        float y = Input.GetAxis("Vertical");
+        float x = Input.GetAxis("Horizontal");
+        Vector2 mov = new Vector2(x, y) * Speed;
+            
+        transform.Translate(mov);
+        
         
     }
 }
