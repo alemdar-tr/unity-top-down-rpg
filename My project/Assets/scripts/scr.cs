@@ -7,7 +7,6 @@ using UnityEditor.Callbacks;
 
 public class scr : MonoBehaviour
 {
-
     public GameObject MC;
     public float Speed;
     // Start is called before the first frame update
@@ -19,11 +18,7 @@ public class scr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float y = Input.GetAxis("Vertical");
-        float x = Input.GetAxis("Horizontal");
-        Vector2 mov = new Vector2(x, y) * Speed;
-            
-        transform.Translate(mov);
+        movement();
     }
 
     private void movement() {
@@ -34,5 +29,13 @@ public class scr : MonoBehaviour
         transform.Translate(mov);
         
         
+    }
+
+    public float getY() {
+        return transform.position.y;
+    }
+
+    public float getx() {
+        return transform.position.x;
     }
 }
