@@ -30,7 +30,7 @@ public class scr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -38,7 +38,6 @@ public class scr : MonoBehaviour
     {
         movement();
         attack();
-        clone.transform.position = transform.position;
     }
 
     private void movement() {
@@ -74,6 +73,9 @@ public class scr : MonoBehaviour
         gameObject.transform.localScale = curruntscale;
 
         facingright = !facingright;
+    }
+    void test(){
+        Recursion.defaultMaxDepth = 200;
     }
 
 
