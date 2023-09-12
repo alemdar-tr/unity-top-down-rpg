@@ -1141,8 +1141,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6536004502268660979, guid: 9597937d1678cd6469cda30a32903926, type: 3}
-      propertyPath: BypassEffects
+    - target: {fileID: 6536004502268660977, guid: 9597937d1678cd6469cda30a32903926, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536004502268660977, guid: 9597937d1678cd6469cda30a32903926, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536004502268660977, guid: 9597937d1678cd6469cda30a32903926, type: 3}
+      propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536004502268660980, guid: 9597937d1678cd6469cda30a32903926, type: 3}

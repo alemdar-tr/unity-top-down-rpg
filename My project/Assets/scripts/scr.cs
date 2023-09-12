@@ -20,24 +20,26 @@ public class scr : MonoBehaviour
         return transform.position.x;
     }
     public GameObject atak;
+    private GameObject clone;
     public float Speed;
     private int Level = 1;
     private int exp = 0;
-    private GameObject clone;
     bool facingright = true;
     float cooldown = 0.5F;
     float nextfire = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement();
         attack();
+        movement();
+        clone.transform.position = transform.position;
+
     }
 
     private void movement() {
@@ -58,13 +60,15 @@ public class scr : MonoBehaviour
     void attack() {
         if (Time.time > nextfire){
             if (Input.GetKey(KeyCode.Mouse0)) {
-                GameObject clone = (GameObject)Instantiate(atak, transform.position, Quaternion.identity);
+                clone = (GameObject)Instantiate(atak, transform.position, Quaternion.identity);
                 clone.transform.position= transform.position;
                 Destroy(clone, 0.4F);
                 nextfire = Time.time + cooldown;
+                if(!facingright){
+                    flipatak();
+                }
             }
         }
-
     }
 
     void flip() {
@@ -74,8 +78,13 @@ public class scr : MonoBehaviour
 
         facingright = !facingright;
     }
+    void flipatak(){
+        Vector3 currentside = clone.gameObject.transform.localScale;
+        currentside *= -1;
+        clone.gameObject.transform.localScale = currentside;
+    }
     void test(){
-        Recursion.defaultMaxDepth = 200;
+        ;
     }
 
 
