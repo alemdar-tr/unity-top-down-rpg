@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting.AssemblyQualifiedNameParser;
 using UnityEditor.Callbacks;
+using Unity.Multiplayer.Tools.NetStatsReporting;
+using JetBrains.Annotations;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 
 public class scr : MonoBehaviour
 {
@@ -15,11 +19,14 @@ public class scr : MonoBehaviour
     public float Getx() {
         return transform.position.x;
     }
-    public GameObject MC;
+    public GameObject atak;
     public float Speed;
     private int Level = 1;
     private int exp = 0;
+    private GameObject clone;
     bool facingright = true;
+    float cooldown = 0.5F;
+    float nextfire = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +37,8 @@ public class scr : MonoBehaviour
     void Update()
     {
         movement();
+        attack();
+        clone.transform.position = transform.position;
     }
 
     private void movement() {
@@ -45,6 +54,18 @@ public class scr : MonoBehaviour
             flip();
         }
         
+    }
+
+    void attack() {
+        if (Time.time > nextfire){
+            if (Input.GetKey(KeyCode.Mouse0)) {
+                GameObject clone = (GameObject)Instantiate(atak, transform.position, Quaternion.identity);
+                clone.transform.position= transform.position;
+                Destroy(clone, 0.4F);
+                nextfire = Time.time + cooldown;
+            }
+        }
+
     }
 
     void flip() {
