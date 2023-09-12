@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: inventory
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":0.0,"y":-15.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-518.0,"y":-193.0},"guid":"d88473b5-50a3-4f13-a001-52b068ed02a3","$version":"A","$type":"Unity.VisualScripting.Start","$id":"9"},{"kind":"Application","defaultValues":{"name":{"$content":"Inventory","$type":"System.String"}},"position":{"x":-356.0,"y":-145.0},"guid":"037fc8f8-f970-4da5-9d7c-026b73befbec","$version":"A","$type":"Unity.VisualScripting.SetVariable","$id":"11"},{"defaultValues":{},"position":{"x":-501.0,"y":-85.0},"guid":"fe294bd1-970a-425e-bca6-8342b9dc06ef","$version":"A","$type":"Unity.VisualScripting.This","$id":"13"},{"sourceUnit":{"$ref":"9"},"sourceKey":"trigger","destinationUnit":{"$ref":"11"},"destinationKey":"assign","guid":"fa511a39-45dd-4137-8e55-9f637009d807","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"self","destinationUnit":{"$ref":"11"},"destinationKey":"input","guid":"3a851266-3d69-4c92-9a5b-c5e2274c25b1","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []

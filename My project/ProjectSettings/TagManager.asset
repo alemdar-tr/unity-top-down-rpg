@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Goblin agression range
+  - ItemSlot
+  - ItemAmount
+  - Item
   layers:
   - Default
   - TransparentFX
