@@ -8,6 +8,7 @@ TagManager:
   - ItemSlot
   - ItemAmount
   - Item
+  - map
   layers:
   - Default
   - TransparentFX
