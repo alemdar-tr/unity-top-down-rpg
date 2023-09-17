@@ -9,6 +9,7 @@ TagManager:
   - ItemAmount
   - Item
   - map
+  - Enemy
   layers:
   - Default
   - TransparentFX

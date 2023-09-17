@@ -1,33 +1,43 @@
 using System;
+using System.Globalization;
 using Unity.Netcode;
 using UnityEngine;
 
 public class scr : NetworkBehaviour
 {
     public static stats playerstats = new stats(20, 5, 23, 5);
-    public static int playerhp = playerstats.GetHp();
-    public static int playerxp = 0;
-    public static int playerlevel = 1;
-    static int requiredxp = 26 * (int)Math.Pow(2, playerlevel - 1);
+    public static int playerhp;
+    public int playerxp;
+    public int playerlevel;
+    public int requiredxp;
     public GameObject atak;
-    private Timers timer1 = new Timers();
+    private Timers timer1 = new Timers(0.5F);
     private GameObject clone;
     private Rigidbody2D rb;
+    MainCam mainCam;
+    Camera cam;
+    Canvas canvas;
     public float Speed;
-    bool facingright = true;
+    public static bool facingright = true;
     float cooldown = 0.4F;
     float cooldown2 = 0.5F;
     float nextfire = 0;
     bool isdashing = false;
     public static weapon equipedweapon = swords.sword;
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        canvas = GetComponentInChildren<Canvas>();
+        cam = GetComponentInChildren<Camera>();
+        mainCam = GetComponentInChildren<MainCam>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-
-    }
-
-    private void Awake(){
-        rb = GetComponent<Rigidbody2D>();
+        SetStats();
+        if (IsLocalPlayer) return;
+        cam.enabled = false;
+        canvas.enabled = false;
     }
 
 // do all the definingb
@@ -35,13 +45,48 @@ public class scr : NetworkBehaviour
     void Update()
     {
         if (!IsOwner) return;
+        levelup();
         attack();
         movement();
-        levelup();
         timer1.countdown();
-        Debug.Log(playerxp + ", " + requiredxp + ", " + playerlevel);
         if (Time.time <= nextfire){
             clone.transform.position = transform.position;
+        }
+    }
+    public void SetStats()
+    {
+        if (!IsLocalPlayer) return;
+        playerhp = playerstats.GetHp();
+        playerxp = 0;
+        playerlevel = 1;
+        requiredxp = 26;
+        SetStatsServerRpc(playerstats.GetHp(), 0, 1, 26);
+    }
+    [ServerRpc]
+    public void SetStatsServerRpc(int hp, int xp, int level, int Rxp)
+    {
+        if (!IsLocalPlayer) {
+            playerhp = hp;
+            playerxp = xp;
+            playerlevel = level;
+            requiredxp = Rxp;
+        }
+        SetStatsClientRpc(playerstats.GetHp(), 0, 1, 26);
+    }
+    [ClientRpc] public void SetStatsClientRpc(int hp, int xp, int level, int Rxp)
+    {
+        if (!IsLocalPlayer && !IsServer) {
+        playerhp = hp;
+        playerxp = xp;
+        playerlevel = level;
+        requiredxp = Rxp;
+        }
+    }
+    void OnCollisionEnter2D(Collision2D col){
+        if(!IsLocalPlayer) return;
+        if (col.collider.tag == "Enemy")
+        {
+            playerhp -= goop.goopstats.GetPow();
         }
     }
     void levelup(){
@@ -70,13 +115,15 @@ public class scr : NetworkBehaviour
             rb.velocity = mov;
         }
         else{
-            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.bodyType = RigidbodyType2D.Static;
         }
         if (x < 0 && facingright){
             flip();
+            mainCam.FlipCam();
         }
         else if(x > 0 && !facingright) {
             flip();
+            mainCam.FlipCam();
         }
         
     }
@@ -85,7 +132,8 @@ public class scr : NetworkBehaviour
         if (Time.time > nextfire){
             if (Input.GetKey(KeyCode.Mouse0)) {
                 clone = (GameObject)Instantiate(atak, transform.position, Quaternion.identity);
-                clone.transform.position= transform.position;
+                clone.transform.SetParent(transform);
+                clone.GetComponent<NetworkObject>().Spawn();
                 Destroy(clone, 0.4F);
                 nextfire = Time.time + cooldown;
                 if(!facingright){
@@ -107,6 +155,7 @@ public class scr : NetworkBehaviour
         currentside *= -1;
         clone.gameObject.transform.localScale = currentside;
     }
+
 
 
 }

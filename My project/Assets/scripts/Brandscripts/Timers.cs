@@ -5,21 +5,12 @@ using UnityEngine;
 public class Timers
 {
     // Start is called before the first frame update
-    public float timer = 0;
+    public float timer;
     private float cooldown;
-    void Start()
-    {
-        
-    }
 
-    void add_cooldown(float cool){
-        cooldown = cool;
-    }
-
-    // Update is called once per frame
-    void Update()
+    public Timers(float timer)
     {
-       
+        this.timer = timer;
     }
 
     public void countdown(){
