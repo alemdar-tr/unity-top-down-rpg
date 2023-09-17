@@ -9,6 +9,7 @@ TagManager:
   - ItemAmount
   - Item
   - map
+  - 'plains '
   layers:
   - Default
   - TransparentFX
