@@ -2,16 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class gamecontrol : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        NetworkManager.Singleton.StartHost();
-    }
+    [SerializeField] private Button Host;
+    [SerializeField] private Button server;
+    [SerializeField] private Button Client;
 
-    // Update is called once per frame
+    private void Awake()
+    {
+        Host.onClick.AddListener(() =>
+        {
+            NetworkManager.Singleton.StartHost();
+        });
+        server.onClick.AddListener(() =>
+        {
+            NetworkManager.Singleton.StartServer();
+        });
+        Client.onClick.AddListener(() =>
+        {
+            NetworkManager.Singleton.StartClient();
+        });
+    }
     void Update()
     {
         if (Input.GetKey(KeyCode.Escape)){
