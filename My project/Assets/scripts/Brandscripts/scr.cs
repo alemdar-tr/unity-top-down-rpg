@@ -9,7 +9,7 @@ public class scr : NetworkBehaviour
     public static int playerhp;
     public int playerxp;
     public int playerlevel;
-    public int requiredxp;
+    public static int requiredxp;
     public GameObject atak;
     private Timers timer1 = new Timers(0.5F);
     private GameObject clone;
@@ -19,7 +19,7 @@ public class scr : NetworkBehaviour
     Canvas canvas;
     public float Speed;
     public static bool facingright = true;
-    float cooldown = 0.4F;
+    float cooldown = 1;
     float cooldown2 = 0.5F;
     float nextfire = 0;
     bool isdashing = false;
@@ -44,7 +44,7 @@ public class scr : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!IsOwner) return;
+        if (!IsLocalPlayer) return;
         levelup();
         attack();
         movement();
@@ -98,7 +98,7 @@ public class scr : NetworkBehaviour
     }
 
     private void movement() {
-        if(Input.GetKey(KeyCode.Space) && timer1.timer == 0){
+        if(Input.GetKeyDown(KeyCode.Space) && timer1.timer == 0){
             Speed *= 5;
             timer1.timer = cooldown2;
             isdashing = true;
@@ -128,18 +128,38 @@ public class scr : NetworkBehaviour
         
     }
 
-    void attack() {
-        if (Time.time > nextfire){
-            if (Input.GetKey(KeyCode.Mouse0)) {
+
+
+    void attack()
+    {
+        if (Time.time > nextfire)
+        {
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
                 clone = (GameObject)Instantiate(atak, transform.position, Quaternion.identity);
                 clone.transform.SetParent(transform);
-                clone.GetComponent<NetworkObject>().Spawn();
                 Destroy(clone, 0.4F);
                 nextfire = Time.time + cooldown;
-                if(!facingright){
+                if (!facingright)
+                {
                     flipatak();
                 }
             }
+        }
+    }
+    [ClientRpc]
+    void attackClientRpc()
+    {
+        if (!IsLocalPlayer) return;
+        clone = (GameObject)Instantiate(atak, transform.position, Quaternion.identity);
+        clone.GetComponent<NetworkObject>().Spawn();
+        clone.transform.SetParent(transform);
+        Destroy(clone, 0.4F);
+        clone.GetComponent <NetworkObject>().Despawn();
+        nextfire = Time.time + cooldown;
+        if (!facingright)
+        {
+            flipatak();
         }
     }
 

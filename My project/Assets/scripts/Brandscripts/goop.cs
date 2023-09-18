@@ -52,53 +52,37 @@ public class goop : NetworkBehaviour
         }
     }
     
-    [ServerRpc(RequireOwnership = false)]
-    void TakeDamageServerRpc()
-    {
-        baard.SetSlide(hp, goopstats.GetHp());
-        TakeDamageClientRpc();
-    }
-
-    [ClientRpc]
-    void TakeDamageClientRpc()
-    {
-        if (!IsServer)
-        {
-            baard.SetSlide(hp, goopstats.GetHp());
-        }
-    }
     void TakeDamage()
     {
         baard.SetSlide(hp, goopstats.GetHp());
-        TakeDamageServerRpc();
+        DoServerRpc();
     }
     void  OnDestroy(){
         xpchange = true;
         test.playerxp += enemyxp;
         idk.timer = 1;
     }
-    [ServerRpc(RequireOwnership = false)]
-    void DieServerRpc(){
-        if (hp <= 0){
-            DieClientRpc();
-            Destroy(gameObject, dietime);
-        }
-    }
-    [ClientRpc]
-    void DieClientRpc()
-    {
-        if (!IsServer)
-        {
-            Destroy(gameObject, dietime);
-            Die();
-        }
-    }
 
     void Die() { 
         if (hp <= 0)
         {
-            Destroy(gameObject, dietime);
             DieServerRpc();
         }
+    }
+    [ServerRpc(RequireOwnership = false)]
+    void DieServerRpc()
+    {
+        Destroy(gameObject, dietime);
+        DoClientRpc();
+    }
+    [ServerRpc(RequireOwnership = false)]
+    void DoServerRpc()
+    {
+        DoClientRpc();
+    }
+    [ClientRpc]
+    void DoClientRpc()
+    {
+
     }
 }

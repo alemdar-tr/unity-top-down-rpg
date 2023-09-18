@@ -26,7 +26,7 @@ public class XP : MonoBehaviour
         Xp.text = "";
         if(goop.xpchange == true)
         {
-            Xp.text += help.playerxp + " / " + help.requiredxp;
+            Xp.text += help.playerxp + " / " + scr.requiredxp;
         }
         
     }
