@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class Spawning : MonoBehaviour
+public class Spawning : NetworkBehaviour
 {
     [SerializeField] private Transform spawning;
     // Start is called before the first frame update
@@ -15,10 +15,26 @@ public class Spawning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Z))
+        Tryspawn();
+    }
+
+    void Tryspawn()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            Transform Spawn = Instantiate(spawning);
-            Spawn.GetComponent<NetworkObject>().Spawn();
+            TrySpawnServerRpc();
         }
+    }
+    [ServerRpc(RequireOwnership = false)]
+    void TrySpawnServerRpc()
+    {
+        Transform Spawn = Instantiate(spawning);
+        Spawn.GetComponent<NetworkObject>().Spawn();
+        TrySpawnClientRpc();
+    }
+    [ClientRpc]
+    void TrySpawnClientRpc()
+    {
+
     }
 }
