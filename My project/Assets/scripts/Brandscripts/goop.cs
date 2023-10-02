@@ -46,17 +46,22 @@ public class goop : NetworkBehaviour
     {
         if (collision.collider.name == "slash_0(Clone)")
         {
-            hp -= damage.Getdamag();
+            NeemSchadeServerRpc();
             test = collision.collider.GetComponentInParent<scr>();
 
         }
     }
-    
+    [ServerRpc(RequireOwnership = false)]
+    void NeemSchadeServerRpc()
+    {
+        hp -= damage.Getdamag();
+        DoClientRpc();
+    }
     void TakeDamage()
     {
         baard.SetSlide(hp, goopstats.GetHp());
-        DoServerRpc();
     }
+
     void  OnDestroy(){
         xpchange = true;
         test.playerxp += enemyxp;
