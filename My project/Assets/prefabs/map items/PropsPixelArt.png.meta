@@ -71,8 +71,8 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
+    compressionQuality: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -1285,7 +1285,7 @@ TextureImporter:
       name: PropsPixelArt_9
       rect:
         serializedVersion: 2
-        x: 27
+        x: 36
         y: 29
         width: 29
         height: 56
@@ -2331,14 +2331,27 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -9, y: 9}
-        - {x: -14, y: 5}
-        - {x: -14, y: -4}
-        - {x: -12, y: -9}
-        - {x: 12, y: -9}
-        - {x: 14, y: -6}
-        - {x: 14, y: 3}
-        - {x: 6, y: 9}
+      - - {x: -4, y: 8}
+        - {x: -7, y: 7}
+        - {x: -10, y: 4}
+        - {x: -13, y: 1}
+        - {x: -13, y: -2}
+        - {x: -12, y: -3}
+        - {x: -11, y: -4}
+        - {x: -10, y: -5}
+        - {x: -8, y: -6}
+        - {x: -6, y: -7}
+        - {x: -4, y: -7}
+        - {x: 3, y: -8}
+        - {x: 9, y: -8}
+        - {x: 11, y: -7}
+        - {x: 12, y: -6}
+        - {x: 13, y: -4}
+        - {x: 13, y: 0}
+        - {x: 12, y: 1}
+        - {x: 9, y: 4}
+        - {x: 5, y: 7}
+        - {x: 2, y: 8}
       physicsShape:
       - - {x: 9, y: 4}
         - {x: 5, y: 7}
@@ -2535,14 +2548,24 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 3, y: 8}
-        - {x: -6, y: 8}
-        - {x: -8, y: 7}
-        - {x: -8, y: -7}
-        - {x: -7, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: -1}
-        - {x: 6, y: 5}
+      - - {x: 1, y: 6}
+        - {x: 0, y: 7}
+        - {x: -2, y: 7}
+        - {x: -4, y: 5}
+        - {x: -5, y: 4}
+        - {x: -6, y: 2}
+        - {x: -7, y: -3}
+        - {x: -7, y: -5}
+        - {x: -6, y: -6}
+        - {x: -5, y: -7}
+        - {x: 6, y: -7}
+        - {x: 7, y: -6}
+        - {x: 7, y: -4}
+        - {x: 6, y: -3}
+        - {x: 5, y: -1}
+        - {x: 4, y: 2}
+        - {x: 3, y: 4}
+        - {x: 2, y: 5}
       physicsShape:
       - - {x: 4, y: 4}
         - {x: 0, y: 7}
@@ -2832,12 +2855,25 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11, y: 9}
-        - {x: -13, y: 8}
-        - {x: -13, y: -9}
-        - {x: 13, y: -9}
-        - {x: 13, y: 4}
-        - {x: 9, y: 9}
+      - - {x: 8, y: 4}
+        - {x: 5, y: 6}
+        - {x: 2, y: 8}
+        - {x: -3, y: 8}
+        - {x: -6, y: 7}
+        - {x: -10, y: 5}
+        - {x: -12, y: 3}
+        - {x: -12, y: -4}
+        - {x: -11, y: -5}
+        - {x: -10, y: -6}
+        - {x: -8, y: -7}
+        - {x: -4, y: -8}
+        - {x: 1, y: -8}
+        - {x: 6, y: -7}
+        - {x: 8, y: -6}
+        - {x: 12, y: -4}
+        - {x: 13, y: -2}
+        - {x: 13, y: 0}
+        - {x: 11, y: 2}
       physicsShape:
       - - {x: 13, y: -2}
         - {x: 13, y: 0}
@@ -3027,7 +3063,7 @@ TextureImporter:
       name: PropsPixelArt_14
       rect:
         serializedVersion: 2
-        x: 62
+        x: 66
         y: 11
         width: 29
         height: 28
@@ -3045,10 +3081,14 @@ TextureImporter:
         - {x: -13.5, y: -4}
         - {x: -13.5, y: -10}
         - {x: -11.5, y: -12}
-        - {x: 10.5, y: -14}
-        - {x: 14.5, y: -9}
-        - {x: 14.5, y: 13}
-        - {x: 12.5, y: 14}
+        - {x: 2.5, y: -13}
+        - {x: 6.5, y: -13}
+        - {x: 9.5, y: -11}
+        - {x: 12.5, y: -6}
+        - {x: 13.5, y: -4}
+        - {x: 13.5, y: 6}
+        - {x: 12.5, y: 9}
+        - {x: 11.5, y: 11}
       physicsShape:
       - - {x: 2.5, y: -13}
         - {x: 6.5, y: -13}
