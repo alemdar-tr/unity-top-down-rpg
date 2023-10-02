@@ -10,6 +10,7 @@ TagManager:
   - Item
   - map
   - Enemy
+  - StackManager
   layers:
   - Default
   - TransparentFX
