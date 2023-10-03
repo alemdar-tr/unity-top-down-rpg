@@ -46,11 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Masterlist","value":{"$content":[{"Key":{"$content":"Dagger","$type":"System.String"},"Value":{"$content":0,"$type":"UnityEngine.Object"}},{"Key":{"$content":"Pickaxe","$type":"System.String"},"Value":{"$content":1,"$type":"UnityEngine.Object"}}],"$type":"Unity.VisualScripting.AotDictionary"},"typeHandle":{"Identification":"Unity.VisualScripting.AotDictionary,
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Masterlist","value":{"$content":[{"Key":{"$content":"Dagger","$type":"System.String"},"Value":{"$content":0,"$type":"UnityEngine.Object"}},{"Key":{"$content":"Pickaxe","$type":"System.String"},"Value":{"$content":1,"$type":"UnityEngine.Object"}},{"Key":{"$content":"Log","$type":"System.String"},"Value":{"$content":2,"$type":"UnityEngine.Object"}}],"$type":"Unity.VisualScripting.AotDictionary"},"typeHandle":{"Identification":"Unity.VisualScripting.AotDictionary,
       Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 5209975325094765385, guid: 72ef9173dbb913240b4aaf3e91d0be0b, type: 3}
     - {fileID: 6622715396616005781, guid: af9e85ca2a54cd74d88bc1a860e71a4e, type: 3}
+    - {fileID: 6638290628752170397, guid: 3b34ac16298f67d4d96b7776a950c4c1, type: 3}
 --- !u!114 &3356165040973864020
 MonoBehaviour:
   m_ObjectHideFlags: 0
