@@ -11,6 +11,7 @@ TagManager:
   - map
   - Enemy
   - StackManager
+  - SplitUI
   layers:
   - Default
   - TransparentFX
