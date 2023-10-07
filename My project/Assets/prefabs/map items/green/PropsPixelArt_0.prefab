@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7826610124495922081}
   - component: {fileID: 2938664669142302299}
-  - component: {fileID: 7424387232103959730}
+  - component: {fileID: -3729674668167337849}
   m_Layer: 0
   m_Name: PropsPixelArt_0
   m_TagString: map
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &7424387232103959730
-PolygonCollider2D:
+--- !u!70 &-3729674668167337849
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -98,44 +98,6 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.4, y: 0.46}
-    newSize: {x: 0.4, y: 0.46}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.11, y: -0.17}
-      - {x: 0.07, y: -0.13}
-      - {x: 0.07, y: -0.11}
-      - {x: 0.089999996, y: -0.099999994}
-      - {x: 0.12, y: -0.089999996}
-      - {x: 0.19, y: -0.01}
-      - {x: 0.19, y: 0.01}
-      - {x: 0.19999999, y: 0.02}
-      - {x: 0.19999999, y: 0.11}
-      - {x: 0.19, y: 0.14}
-      - {x: 0.14999999, y: 0.19}
-      - {x: 0.06, y: 0.22999999}
-      - {x: -0.07, y: 0.22999999}
-      - {x: -0.12, y: 0.21}
-      - {x: -0.19, y: 0.14}
-      - {x: -0.19999999, y: 0.11}
-      - {x: -0.19999999, y: 0.01}
-      - {x: -0.19, y: 0}
-      - {x: -0.19, y: -0.01}
-      - {x: -0.11, y: -0.089999996}
-      - {x: -0.089999996, y: -0.099999994}
-      - {x: -0.099999994, y: -0.11}
-      - {x: -0.099999994, y: -0.13}
-      - {x: -0.14, y: -0.17}
-      - {x: -0.14, y: -0.19}
-      - {x: -0.099999994, y: -0.22999999}
-      - {x: 0.02, y: -0.22999999}
-      - {x: 0.07, y: -0.22}
-      - {x: 0.11, y: -0.17999999}
+  m_Offset: {x: -0.016, y: -0.19}
+  m_Size: {x: 0.21, y: 0.05}
+  m_Direction: 1
