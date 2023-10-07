@@ -12,6 +12,8 @@ TagManager:
   - Enemy
   - StackManager
   - SplitUI
+  - ToolTipOverlay
+  - ToolTip
   layers:
   - Default
   - TransparentFX
