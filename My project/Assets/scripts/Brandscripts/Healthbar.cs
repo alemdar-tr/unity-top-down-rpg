@@ -14,9 +14,10 @@ public class Healthbar : MonoBehaviour
         slider.maxValue = scr.playerstats.GetHp();
     }
     void Start(){
-        Setmaxslide();
+
     }
     void Update(){
+        Setmaxslide();
         Setslide();
     }
     public void Setslide(){

@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class stats
 {
-    int health;
-    int magic;
-    int defence;
-    int Power;
+    public int health;
+    public int magic;
+    public int defence;
+    public int Power;
 
     public stats(int hp, int mp, int def, int pow){
         health = hp;
