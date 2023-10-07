@@ -45,13 +45,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593a2fe42fa9d37498c96f9a383b6521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RunInBackground: 1
+  LogLevel: 0
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 8987826882010197937}
     PlayerPrefab: {fileID: 712305908842588231, guid: 02d62356392d89d4b83cf1a9cf8d2c85, type: 3}
-    Prefabs:
-      NetworkPrefabsLists:
-      - {fileID: 11400000, guid: b5c2c1bc7c3730c43b29d9d83392125f, type: 2}
+    NetworkPrefabs:
+    - Override: 0
+      Prefab: {fileID: 712305908842588231, guid: 02d62356392d89d4b83cf1a9cf8d2c85, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 6536004502268660980, guid: 9597937d1678cd6469cda30a32903926, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
@@ -67,9 +77,6 @@ MonoBehaviour:
     LoadSceneTimeOut: 120
     SpawnTimeout: 1
     EnableNetworkLogs: 1
-    OldPrefabList: []
-  RunInBackground: 1
-  LogLevel: 0
 --- !u!114 &8987826882010197937
 MonoBehaviour:
   m_ObjectHideFlags: 0

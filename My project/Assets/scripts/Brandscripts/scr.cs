@@ -9,11 +9,13 @@ public class scr : NetworkBehaviour
     public static int playerhp;
     public int playerxp;
     public int playerlevel;
-    public static int requiredxp;
+    public static double requiredxp;
+    public static bool playerdead = false;
     public GameObject atak;
     private Timers timer1 = new Timers(0.5F);
     private GameObject clone;
     private Rigidbody2D rb;
+    SpriteRenderer SP;
     MainCam mainCam;
     Camera cam;
     Canvas canvas;
@@ -26,6 +28,7 @@ public class scr : NetworkBehaviour
     public static weapon equipedweapon = swords.sword;
     void Awake()
     {
+        SP = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         canvas = GetComponentInChildren<Canvas>();
         cam = GetComponentInChildren<Camera>();
@@ -45,6 +48,7 @@ public class scr : NetworkBehaviour
     void Update()
     {
         if (!IsLocalPlayer) return;
+        Die();
         levelup();
         attack();
         movement();
@@ -82,6 +86,17 @@ public class scr : NetworkBehaviour
         requiredxp = Rxp;
         }
     }
+
+    void Die()
+    {
+
+        if (playerhp <= 0)
+        {
+            playerdead = true;
+            playerhp = 0;
+            SP.enabled = false;
+        }
+    }
     void OnCollisionEnter2D(Collision2D col){
         if(!IsLocalPlayer) return;
         if (col.collider.tag == "Enemy")
@@ -91,10 +106,17 @@ public class scr : NetworkBehaviour
     }
     void levelup(){
         if (playerxp >= requiredxp){
-            playerxp -= requiredxp;
+            playerxp -= (int)requiredxp;
             playerlevel += 1;
-            requiredxp = 26 * (int)Math.Pow(2, playerlevel - 1);
+            requiredxp = 26 * (0.25 * Math.Pow(playerlevel, 2));
+            requiredxp = Math.Round(requiredxp);
+            AddStats();
         }
+    }
+
+    void AddStats()
+    {
+        playerstats.health += RandomStats.AddHP();
     }
 
     private void movement() {
