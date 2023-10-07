@@ -10,10 +10,6 @@ TagManager:
   - Item
   - map
   - Enemy
-  - StackManager
-  - SplitUI
-  - ToolTipOverlay
-  - ToolTip
   layers:
   - Default
   - TransparentFX
