@@ -840,6 +840,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1657349773, guid: c5c93eec70cdc8a47a25bb87daab578f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657349773, guid: c5c93eec70cdc8a47a25bb87daab578f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989471514, guid: c5c93eec70cdc8a47a25bb87daab578f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989471514, guid: c5c93eec70cdc8a47a25bb87daab578f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013116087, guid: c5c93eec70cdc8a47a25bb87daab578f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013116087, guid: c5c93eec70cdc8a47a25bb87daab578f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 311748656599860621, guid: c5c93eec70cdc8a47a25bb87daab578f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 311748656599860621, guid: c5c93eec70cdc8a47a25bb87daab578f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7905259665197886482, guid: c5c93eec70cdc8a47a25bb87daab578f, type: 3}
       propertyPath: m_Name
       value: player
