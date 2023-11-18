@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:My project/Assets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
 guid: a9defc46887233249b1a0da50da7f2d6
 folderAsset: yes
 DefaultImporter:
+========
+guid: cb147b74853bf6c4eb144cdb1197876a
+PrefabImporter:
+>>>>>>>> 76002aac35be15b80a4845f0e523792b47b48b2a:My project/Assets/prefabs/Items/Amount.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
